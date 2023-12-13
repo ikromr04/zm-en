@@ -25,7 +25,7 @@ class AuthController extends Controller
     if (!$user) {
       return response([
         'errors' => [
-          'email' => 'Пользователь не найден',
+          'email' => 'User not found',
         ],
       ], 400);
     }
@@ -36,7 +36,7 @@ class AuthController extends Controller
     } else {
       return response([
         'errors' => [
-          'password' => 'Неправильный пароль',
+          'password' => 'Invalid password',
         ],
       ], 400);
     }
