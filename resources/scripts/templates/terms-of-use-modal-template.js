@@ -5,7 +5,7 @@ export const getTermsOfUseModaltemplate = () => `
         <h1 class="title title--secondary">User Agreement</h1>
 
         <div class="box">
-          <p>This User Agreement (hereinafter referred to as the "Agreement") is an offer to the Internet user (hereinafter referred to as the "User") to conclude an agreement on the use of services (hereinafter referred to as "Services") provided on the zafarmirzo.com website (hereinafter referred to as the "Site").</p>
+          <p>This User Agreement (hereinafter referred to as the "Agreement") is an offer to the Internet user (hereinafter referred to as the "User") to conclude an agreement on the use of services (hereinafter referred to as "Services") provided on the zmquotes.com website (hereinafter referred to as the "Site").</p>
 
           <section>
             <h2>1. General Provisions</h2>
@@ -62,7 +62,7 @@ export const getTermsOfUseModaltemplate = () => `
           <section>
             <h2>4. Other Terms</h2>
             <p>4.1. The Service is provided by the Site "as is." The Site does not guarantee that the information and Services meet the User's goals and expectations, their uninterrupted and error-free operation, as well as the safety of the User's profile and Information posted by the User on the Site.</p>
-            <p>4.2. All claims related to the use/inability to use the Site and/or Services should be sent via email: zafarmirzo.com.</p>
+            <p>4.2. All claims related to the use/inability to use the Site and/or Services should be sent via email: zmquotes.com.</p>
             <p>4.3. The Site reserves the right to change the text of this Agreement and/or any other conditions of using the Site and Services at any time without notifying the User. In situations not described by this Agreement, the administration has the right to act at its discretion.</p>
           </section>
         </div>

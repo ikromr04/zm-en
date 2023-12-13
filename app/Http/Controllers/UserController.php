@@ -43,7 +43,7 @@ class UserController extends Controller
       'password' => $request->password,
     ], function ($message) use ($request) {
       $message->to($request->email);
-      $message->subject('Добро пожаловать на сайт zafarmirzo.com!');
+      $message->subject('Welcome to the site zmquotes.com!');
     });
 
     session()->put('user', $user);
@@ -104,7 +104,7 @@ class UserController extends Controller
       'password' => '',
     ], function ($message) use ($user) {
       $message->to($user->email);
-      $message->subject('Добро пожаловать на сайт zafarmirzo.com!');
+      $message->subject('Welcome to the site zmquotes.com!');
     });
 
     return back();
@@ -133,12 +133,12 @@ class UserController extends Controller
   public function forgotPassword(Request $request)
   {
     if (!request('email')) {
-      return response(['email' => 'Это поле обязательное'], 400);
+      return response(['email' => 'Email is required'], 400);
     }
     $user = User::where('email', request('email'))->first();
 
     if (!$user) {
-      return response(['email' => 'Выбранный адрес электронной почты недействителен.'], 400);
+      return response(['email' => 'Invalid email'], 400);
     }
 
     $token = Str::random(64);
@@ -154,7 +154,7 @@ class UserController extends Controller
       $message->subject('Сброс пароля');
     });
 
-    return response(['message' => 'Мы отправили вам ссылку для сброса пароля по электронной почте!'], 200);
+    return response(['message' => 'We\'ve emailed you a reset link!'], 200);
   }
 
   public function resetPassword($token)
@@ -165,25 +165,25 @@ class UserController extends Controller
   public function resetPasswordSubmit(Request $request)
   {
     if (!request('email')) {
-      return response(['email' => 'Это поле обязательное'], 400);
+      return response(['email' => 'Email required'], 400);
     }
     if (!request('password')) {
-      return response(['password' => 'Это поле обязательное'], 400);
+      return response(['password' => 'Password required'], 400);
     }
     if (!request('confirm_password')) {
-      return response(['confirm_password' => 'Это поле обязательное'], 400);
+      return response(['confirm_password' => 'Password required'], 400);
     }
     if (request('password') != request('confirm_password')) {
       return response([
-        'password' => 'Пароли не совпадают',
-        'confirm_password' => 'Пароли не совпадаюте'
+        'password' => 'Passwords not matched',
+        'confirm_password' => 'Passwords not matched'
       ], 400);
     }
 
     $user = User::where('email', '=', $request->email)->first();
 
     if (!$user) {
-      return response(['email' => 'Пользователь не найден'], 400);
+      return response(['email' => 'User not found'], 400);
     }
 
     $updatePassword = DB::table('password_resets')
@@ -194,7 +194,7 @@ class UserController extends Controller
       ->first();
 
     if (!$updatePassword) {
-      return response(['message' => 'Недействительный токен!'], 400);
+      return response(['message' => 'Invalid token!'], 400);
     }
 
     User::where('email', $request->email)->update(['password' => Hash::make($request->password)]);
@@ -245,7 +245,7 @@ class UserController extends Controller
         'password' => '',
       ], function ($message) use ($email) {
         $message->to($email);
-        $message->subject('Добро пожаловать на сайт zafarmirzo.com!');
+        $message->subject('Welcome to the site zmquotes.com!');
       });
 
       return redirect()->back()->with('verify', request('email'));
@@ -271,13 +271,13 @@ class UserController extends Controller
     $user = User::find($userId);
 
     if (!Hash::check(request('password'), $user->password)) {
-      return back()->withErrors(['password' => ['Неправильный пароль']]);
+      return back()->withErrors(['password' => ['Invalid password']]);
     }
 
     $user->password = bcrypt(request('new_password'));
     $user->update();
 
-    return redirect(route('users.profile', $userId))->with('message', 'Пароль успешно обновлен');
+    return redirect(route('users.profile', $userId))->with('message', 'Password updated');
   }
 
   public function favoritesShow($userId, $favoriteId)

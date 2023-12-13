@@ -5,8 +5,8 @@ export const getPrivacyPolicyModaltemplate = () => `
         <h1 class="title title--secondary">Privacy Policy</h1>
 
         <div class="box">
-          <p>User Registration on zafarmirzo.com</p>
-          <p>•	By registering on the zafarmirzo.com website (hereinafter referred to as the "Service"), the user accepts this Consent to the Processing of Personal Data (hereinafter referred to as "Consent") with the following conditions:</p>
+          <p>User Registration on zmquotes.com</p>
+          <p>•	By registering on the zmquotes.com website (hereinafter referred to as the "Service"), the user accepts this Consent to the Processing of Personal Data (hereinafter referred to as "Consent") with the following conditions:</p>
           <section>
             <h2>1. Personal Information</h2>
             <p>1.1. Personal information refers to:</p>

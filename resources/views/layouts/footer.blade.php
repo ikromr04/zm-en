@@ -14,7 +14,7 @@
 
     <p class="page-footer__feedback">
       @lang('Обратная связь') <br>
-      <a href="mailto:info@zafarmirzo.com">info@zafarmirzo.com</a>
+      <a href="mailto:info@zmquotes.com">info@zmquotes.com</a>
     </p>
   </div>
 </footer>
