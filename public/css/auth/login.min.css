@@ -1,0 +1,166 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+}
+.title--secondary {
+  color: #e2b65c;
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-width: 40px;
+  min-height: 40px;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  text-decoration: none;
+  border: none;
+  background-color: #111111;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 4px 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.button:disabled {
+  opacity: 0.6;
+}
+.button[data-loading] {
+  opacity: 0.6;
+  pointer-events: none;
+  color: transparent;
+  background-image: url("/images/spinner.gif");
+  background-position: center;
+  background-size: 24px;
+  background-repeat: no-repeat;
+}
+.button--secondary {
+  background-color: #e2b65c;
+}
+.button--gray {
+  background-color: #B2B2B2;
+}
+@media (min-width: 1200px) {
+  .button:hover {
+    background-color: #e2b65c;
+  }
+}
+
+.text {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #000000;
+  line-height: 24px;
+  font-size: 16px;
+}
+.text--error {
+  color: #DC0000;
+}
+.text--success {
+  color: #66bb6a;
+}
+
+.box {
+  margin-top: 8px;
+}
+.box p {
+  margin: 0;
+}
+.box ul {
+  margin: 0;
+}
+
+.login {
+  width: 90%;
+  max-width: 320px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 8px;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login__title {
+  text-align: center;
+}
+
+.login__error {
+  font-size: 14px;
+  color: red;
+}
+
+.form-element {
+  display: flex;
+}
+
+.text-field {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #b2b2b2;
+  padding: 4px 16px;
+}
+
+.submit-button {
+  min-width: 100%;
+}
+.submit-button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=login.min.css.map*/

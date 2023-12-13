@@ -1,0 +1,141 @@
+.favorites {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include tablet {
+    gap: 16px;
+  }
+}
+
+.favorites__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.favorites__card {
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 8px;
+  height: 56px;
+
+  svg {
+    color: $base-secondary;
+  }
+}
+
+.favorites__new {
+  display: flex;
+  flex-grow: 1;
+}
+
+.favorites__link {
+  display: flex;
+  flex-grow: 1;
+  text-decoration: none;
+  align-self: stretch;
+  align-items: center;
+  gap: 8px;
+
+  .favorites__card--edit & {
+    flex-grow: 0;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+.favorites__card-edit {
+  display: none;
+  visibility: hidden;
+  flex-grow: 1;
+  
+  .favorites__card--edit & {
+    display: flex;
+    visibility: visible;
+  }
+}
+
+.favorites__action-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.favorites__action-button {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  height: 32px;
+  width: 32px;
+  color: $base-gray;
+  cursor: pointer;
+
+  * {
+    pointer-events: none;
+  }
+
+  svg {
+    color: inherit;
+  }
+
+  &--success svg {
+    color: #66bb6a;
+  }
+
+  &--error svg {
+    color: #f44336;
+  }
+}
+
+.favorites__action-label {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  background-color: #212121;
+  color: #ffffff;
+  padding: 4px 8px;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 4px;
+  min-width: max-content;
+  transition: .3s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(100% - 4px);
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: #212121;
+    background: linear-gradient(135deg, transparent 50%, black 50%);
+    transform: rotate(45deg) translateX(-50%);
+  }
+
+  .favorites__action-button:hover &,
+  .favorites__action-button:focus & {
+    opacity: 1;
+    visibility: visible;
+  }
+}

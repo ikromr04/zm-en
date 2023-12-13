@@ -1,0 +1,116 @@
+.tags {
+  background-color: $base-white;
+  border-radius: 8px;
+
+  @include tablet {
+    min-width: 240px;
+    width: 240px;
+    height: calc(100vh - 48px);
+    position: sticky;
+    top: 24px;
+    z-index: 0;
+  }
+
+  @include desktop {
+    top: 112px;
+    height: calc(100vh - 136px);
+  }
+}
+
+.tags__title {
+  padding: 8px 16px;
+  padding-bottom: 4px;
+
+  .tags--hidden & {
+    padding: 8px 16px;
+  }
+
+  @include tablet {
+    border-bottom: 1px solid #b2b2b2;
+    padding-top: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+.tags__button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-weight: 500;
+
+  @include tablet {
+    pointer-events: none;
+  }
+}
+
+.tags__button-icon {
+  transform: rotate(90deg) scaleX(-1);
+  transition: 0.3s;
+
+  .tags--hidden & {
+    transform: rotate(90deg);
+  }
+
+  @include tablet {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.tags__list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid #b2b2b2;
+
+  .tags--hidden & {
+    visibility: hidden;
+    display: none;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    max-height: calc(100% - 70px);
+    padding-right: 6px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-top: none;
+    padding: 16px;
+    padding-top: 0;
+    margin-right: 6px;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $base-secondary;
+      border-radius: 2px;
+    }
+  }
+}
+
+.tags__link {
+  text-decoration: none;
+  display: flex;
+  gap: 8px;
+  transition: 0.3s;
+  color: $primary-light;
+
+  &--current {
+    color: $base-secondary;
+  }
+
+  @include desktop {
+    &:hover {
+      color: $base-secondary;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &[data-error] {
+    &::after {
+      content: attr(data-error);
+      font-size: 14px;
+      color: #DC0000;
+    }
+  }
+
+  &>span {
+    font-size: 14px;
+    color: #DC0000;
+  }
+}
+
+.field__label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  span {
+    color: #B2B2B2;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.field__input {
+  border-radius: 8px;
+  border: 1px solid #B2B2B2;
+  background-color: #FFF;
+  line-height: 1;
+  font-size: 16px;
+  padding: 4px 16px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+
+  .field[data-error] & {
+    border: 1px solid #DC0000;
+  }
+}

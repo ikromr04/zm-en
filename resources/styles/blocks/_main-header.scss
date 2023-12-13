@@ -1,0 +1,23 @@
+.main-header {
+  background-color: $base-primary;
+  color: $base-white;
+  padding: 16px 0;
+
+  @include tablet {
+    padding: 24px 0;
+  }
+
+  @include desktop {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+}
+
+.main-header__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}

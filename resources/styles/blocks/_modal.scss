@@ -1,0 +1,124 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: max-content;
+  z-index: 9;
+  display: flex;
+  background-color: rgba(#000000, 64%);
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+  padding: 5vw;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $base-secondary;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $base-primary;
+  }
+
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.modal__container {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: max-content;
+  background-color: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 32px;
+  border-radius: 8px;
+  margin: auto;
+
+  &--wide {
+    height: 80vh;
+    max-width: 880px;
+  }
+
+  @include tablet {
+    padding: 80px;
+  }
+}
+
+.modal__scroll {
+  overflow-y: scroll;
+  padding-right: 16px;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $base-secondary;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $base-primary;
+  }
+}
+
+.modal__title {
+  margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 24px;
+  }
+}
+
+.modal__text {
+  margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 24px;
+  }
+}
+
+.modal__close {
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: #e2b65c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+
+  &>* {
+    pointer-events: none;
+  }
+}
+
+.modal__button {
+  max-width: none;
+}
+
+.modal__back {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  max-width: max-content;
+  gap: 8px;
+  font-weight: 500;
+  margin-top: 16px;
+}

@@ -1,0 +1,23 @@
+.account-link {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  gap: 8px;
+  min-height: 40px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+  display: none;
+
+  @include tablet {
+    display: flex;
+    padding: 4px 24px;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: $base-secondary;
+    }
+  }
+}

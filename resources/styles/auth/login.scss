@@ -1,0 +1,51 @@
+@import "../global/_fonts.scss";
+@import "../global/_variables.scss";
+@import "../global/_mixins.scss";
+@import "../global/_global.scss";
+
+.login {
+  width: 90%;
+  max-width: 320px;
+  background-color: $base-white;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 8px;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login__title {
+  text-align: center;
+}
+
+.login__error {
+  font-size: 14px;
+  color: red;
+}
+
+.form-element {
+  display: flex;
+}
+
+.text-field {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid $base-gray;
+  padding: 4px 16px;
+}
+
+.submit-button {
+  min-width: 100%;
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}

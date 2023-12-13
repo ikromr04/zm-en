@@ -1,0 +1,11 @@
+.profile-section__title {
+  margin-bottom: 8px;
+
+  @include tablet {
+    margin-bottom: 16px;
+  }
+}
+
+.profile-section__form {
+  max-width: 440px;
+}

@@ -1,0 +1,57 @@
+.tags-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include tablet {
+    flex-direction: row-reverse;
+  }
+}
+
+.tags-page__right {
+  background-color: $base-white;
+  padding: 16px;
+  border-radius: 8px;
+
+  @include tablet {
+    flex-grow: 1;
+    padding: 16px 24px;
+  }
+}
+
+.tags-page__title {
+  padding-bottom: 4px;
+  border-bottom: 1px solid $primary-light;
+}
+
+.tags-page__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 8px;
+
+  @include tablet {
+    column-count: 2;
+    column-gap: 16px;
+    padding-top: 16px;
+  }
+
+  @include desktop {
+    column-count: 4;
+  }
+}
+
+.tags-page__list-item {
+  margin-bottom: 4px;
+}
+
+.tags-page__list-link {
+  text-decoration: none;
+  transition: 0.3s;
+
+  @include desktop {
+    &:hover {
+      color: $base-secondary;
+    }
+  }
+}

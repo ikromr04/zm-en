@@ -1,0 +1,85 @@
+.folder,
+.child {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.folder:hover,
+.child:hover {
+  background-color: rgba(0, 0, 0, 4%);
+}
+
+.child::before {
+  content: "";
+  display: block;
+  min-width: 24px;
+  min-height: 24px;
+  border-left: 2px solid #212121;
+  border-bottom: 2px solid #212121;
+  margin-right: 8px;
+  transform: translate(50%, -50%);
+}
+
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  margin-left: auto;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 40%);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+
+.folder:hover .button {
+  opacity: 1;
+  visibility: visible;
+}
+
+.info {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  background-color: #212121;
+  color: #ffffff;
+  padding: 4px 8px;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 4px;
+  min-width: max-content;
+  transition: .3s;
+}
+
+.info::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 4px);
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: #212121;
+  background: linear-gradient(135deg, transparent 50%, black 50%);
+  transform: rotate(45deg) translateX(-50%);
+}
+
+.button:hover .info,
+.button:focus .info {
+  opacity: 1;
+  visibility: visible;
+}

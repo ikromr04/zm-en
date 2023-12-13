@@ -1,0 +1,33 @@
+.menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: $base-secondary;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.menu-button__icon {
+  &--collapse {
+    display: block;
+
+    .main-header--collapsed & {
+      display: none;
+    }
+  }
+
+  &--expand {
+    display: none;
+
+    .main-header--collapsed & {
+      display: block;
+    }
+  }
+}

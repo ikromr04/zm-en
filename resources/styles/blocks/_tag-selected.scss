@@ -1,0 +1,10 @@
+.tag-selected {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}

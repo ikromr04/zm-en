@@ -1,0 +1,55 @@
+.pagination {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pagination__item {
+  display: flex;
+
+  &:nth-last-child(2) {
+    transform: scaleX(-1);
+  }
+}
+
+.pagination__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  padding: 1px 1px 0 0;
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background-color: $base-white;
+  text-decoration: none;
+  transition: 0.3s;
+
+  &--current {
+    font-weight: 500;
+    background-color: $base-primary;
+    color: $base-white;
+    pointer-events: none;
+  }
+
+  &--disabled {
+    color: $base-gray;
+  }
+
+  .pagination__item:nth-last-child(2) &,
+  .pagination__item:last-child & {
+    padding: 0;
+  }
+
+  @include desktop {
+    &:hover {
+      background-color: $base-secondary;
+      color: $base-white;
+    }
+  }
+}

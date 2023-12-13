@@ -1,0 +1,68 @@
+.page-footer {
+  background-color: $base-primary;
+  color: $base-white;
+  padding: 16px 0;
+
+  @include tablet {
+    padding: 24px 0;
+  }
+
+  @include desktop {
+    padding: 32px 0;
+  }
+}
+
+.page-footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  br {
+    display: none;
+  }
+
+  @include tablet {
+    flex-direction: row;
+    gap: 32px;
+
+    br {
+      display: inline;
+    }
+  }
+}
+
+.page-footer__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: underline;
+
+  a {
+    cursor: pointer;
+  }
+}
+
+.page-footer__copyright {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: $base-secondary;
+  min-width: max-content;
+
+  @include tablet {
+    margin-right: auto;
+    &::before {
+      content: "";
+      display: block;
+      min-width: 58px;
+      min-height: 45px;
+      width: 58px;
+      height: 45px;
+      background-image: url('data:image/svg+xml,<svg width="58" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23a)"><rect y="6" width="52.102" height="40" rx="4" fill="%23E2B65C"/><path d="M8.33 35v-2.19l8.71-12.222H8.313v-3.043h13.363v2.19l-8.719 12.222h8.736V35H8.33Zm16.195-17.454h4.551l4.807 11.727h.204l4.807-11.727h4.551V35h-3.58V23.64h-.144l-4.517 11.275h-2.438L28.25 23.597h-.145V35h-3.58V17.546Z" fill="%23000"/></g><defs><clipPath id="a"><path fill="%23fff" d="M0 0h52v52H0z"/></clipPath></defs></svg>');
+    }
+  }
+}

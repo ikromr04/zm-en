@@ -1,0 +1,62 @@
+.main-navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .main-header--collapsed & {
+    display: none;
+    visibility: hidden;
+  }
+
+  @include tablet {
+    width: auto;
+    flex-direction: row;
+    gap: 0;
+
+    .main-header--collapsed & {
+      display: flex;
+      visibility: visible;
+    }
+  }
+
+  @include desktop {
+    gap: 8px;
+  }
+}
+
+.main-navigation__link {
+  display: flex;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  gap: 8px;
+  min-height: 40px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &--current {
+    opacity: 0.4;
+  }
+
+  @include tablet {
+    padding: 4px 24px;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: $base-secondary;
+    }
+
+    &--current {
+      opacity: 1;
+      background-color: $base-secondary;
+    }
+
+    &--login,
+    &--account {
+      display: none;
+    }
+  }
+}

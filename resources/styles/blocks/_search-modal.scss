@@ -1,0 +1,128 @@
+.search-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100vw;
+  height: 100vh;
+  background-color: $base-primary;
+  border: none;
+  padding: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: all;
+
+  .search-modal-shown & {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @include tablet {
+    background-color: rgba($base-primary, 80%);
+  }
+
+  @include desktop {
+    padding-top: 16vh;
+  }
+}
+
+.search-modal-shown {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.search-modal__title {
+  color: $base-white;
+  padding: 16px;
+}
+
+.search-modal__form {
+  background-color: $base-white;
+  flex-grow: 1;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  max-width: 560px;
+  padding: 16px 24px;
+
+  @include desktop {
+    flex-grow: 0;
+    border-radius: 8px;
+  }
+}
+
+.search-modal__input {
+  display: flex;
+  width: 100%;
+  border: none;
+  padding: 0;
+  color: $base-primary;
+  font-size: 16px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid $base-gray;
+
+  &::placeholder {
+    color: $base-gray;
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid $base-secondary;
+  }
+}
+
+.search-modal__results {
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $base-secondary;
+  }
+
+  @media (min-width: 1200px) {
+    max-height: 400px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 16px;
+
+    li {
+      margin-bottom: 8px;
+      color: $primary-light;
+
+      a {
+        text-decoration: none;
+        padding: 4px 0;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+}
+
+.search-modal__close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  color: $base-secondary;
+  cursor: pointer;
+}

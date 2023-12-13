@@ -1,0 +1,10 @@
+.quote-selected {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include tablet {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+}

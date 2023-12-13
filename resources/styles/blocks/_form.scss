@@ -1,0 +1,34 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include tablet {
+    gap: 16px;
+  }
+}
+
+.form__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 16px;
+
+  a {
+    max-width: max-content;
+  }
+}
+
+.form__aware {
+  font-size: 14px;
+  margin: 0;
+}
+
+.form__submit {
+  margin-top: 8px;
+  max-width: none;
+
+  @include tablet {
+    margin-top: 16px;
+  }
+}

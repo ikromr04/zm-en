@@ -1,0 +1,133 @@
+.profile {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include tablet {
+    position: relative;
+  }
+}
+
+.profile__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: max-content;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+  background-color: #fff;
+  color: $base-black;
+  padding: 32px;
+  padding-top: 40px;
+
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  @include tablet {
+    width: max-content;
+    height: max-content;
+    border-radius: 8px;
+    position: absolute;
+    top: 80px;
+    left: auto;
+    right: 0;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, .1);
+    min-width: 320px;
+  }
+}
+
+.profile__avatar {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.profile__image {
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.profile__avatar-change {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D9D9D9;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile__name {
+  padding: 0 16px 8px 16px;
+  border-bottom: 1px solid $base-primary;
+  margin-bottom: 32px;
+}
+
+.profile__navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.profile__navigation-link {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition: .3s;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 24px;
+    height: 24px;
+  }
+}
+
+.profile__logout {
+  max-width: none;
+  width: 100%;
+}
+
+.profile__close {
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #e2b65c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+
+  @include tablet {
+    display: none;
+  }
+}
