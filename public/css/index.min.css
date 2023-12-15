@@ -1535,7 +1535,13 @@ img {
 }
 
 .modal__close {
+  border: none;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
   color: #e2b65c;
+  cursor: pointer;
 }
 .modal__close > * {
   pointer-events: none;
