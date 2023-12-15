@@ -1,4 +1,7 @@
 <header class="main-header main-header--collapsed">
+  <svg width="11" height="10">
+    <use xlink:href="/images/stack.svg#close"/>
+  </svg>
   <div class="main-header__container container">
     <x-main-logo />
 
