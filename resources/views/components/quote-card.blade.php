@@ -101,7 +101,7 @@
             <use xlink:href="{{ asset('images/stack.svg') }}#telegram" />
           </svg>
         </a>
-        <button class="quote-card__share-link" type="button" aria-label="@lang('Скопировать')">
+        <button class="quote-card__share-link" type="button" aria-label="Copy">
           <svg width="13" height="13">
             <use xlink:href="{{ asset('images/stack.svg') }}#copy" />
           </svg>
