@@ -90,7 +90,7 @@ function Folder(props) {
           onClick={() => setIsCreating(true)}
           type="button"
         >
-          Create folder
+          Create subfolder
         </button>
       </div>
       {isCreating &&
