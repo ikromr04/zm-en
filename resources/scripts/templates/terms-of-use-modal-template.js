@@ -70,7 +70,7 @@ export const getTermsOfUseModaltemplate = () => `
 
       <button class="modal__close" type="button" title="Close window">
         <svg width="11" height="10">
-          <use xlink:href="https://zmquotes.com/images/stack.svg#close"/>
+          <use xlink:href="/images/stack.svg#close"/>
         </svg>
       </button>
     </div>
