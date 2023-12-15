@@ -1480,6 +1480,7 @@ img {
 .modal__container {
   position: relative;
   width: 100%;
+  z-index: 0;
   max-width: 480px;
   height: -moz-max-content;
   height: max-content;
