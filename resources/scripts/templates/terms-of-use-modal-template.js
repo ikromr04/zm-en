@@ -25,18 +25,18 @@ export const getTermsOfUseModaltemplate = () => `
             <p>2.2.4. Prohibited on the Site are:</p>
             <ul>
               <li>Propaganda of violence, racial, gender, national, religious discrimination;</li>
-              <li>Commercial activities in any form, including advertising goods, services, internet resources, and other products, even in nicknames, avatars, signatures. Any correspondence with other users through comments for the purpose of gaining commercial benefit is prohibited;<li/>
-              <li>Posting on the Site any information that, in the opinion of the site administration, does not correspond to the mission, values, thematic policy, and goals of the portal;<li/>
+              <li>Commercial activities in any form, including advertising goods, services, internet resources, and other products, even in nicknames, avatars, signatures. Any correspondence with other users through comments for the purpose of gaining commercial benefit is prohibited;</li>
+              <li>Posting on the Site any information that, in the opinion of the site administration, does not correspond to the mission, values, thematic policy, and goals of the portal;</li>
               <li>
                 User avatar must not:
 
                 Аватар пользователя является публичной информацией и не должен:
                 <ul>
-                  <li>contain obscene images,<li/>
-                  <li>contain elements of the site's corporate style,<li/>
-                  <li>contain advertising,<li/>
-                  <li>copy avatars of other users,<li/>
-                  <li>contain information or images that, in the opinion of the site administration, do not correspond to the policy and values of the portal.<li/>
+                  <li>contain obscene images,</li>
+                  <li>contain elements of the site's corporate style,</li>
+                  <li>contain advertising,</li>
+                  <li>copy avatars of other users,</li>
+                  <li>contain information or images that, in the opinion of the site administration, do not correspond to the policy and values of the portal.</li>
                 </ul>
               </li>
               <li>Disrespectful Treatment of Interlocutors: Rough personal attacks (referring to the interlocutor's profession, nationality, position held, physical defects, mental disorders, qualitative assessment of the interlocutor's personality, crude characterization of their actions, negative discussion of personal qualities, and other forms) are prohibited.</li>
