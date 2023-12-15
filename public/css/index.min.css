@@ -1029,6 +1029,8 @@ img {
   font-size: 16px;
   padding-bottom: 4px;
   border-bottom: 1px solid #b2b2b2;
+  border-radius: 0;
+  background-color: transparent;
 }
 .search-modal__input::-moz-placeholder {
   color: #b2b2b2;
