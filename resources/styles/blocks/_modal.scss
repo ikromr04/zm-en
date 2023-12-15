@@ -92,16 +92,16 @@
 .modal__close {
   background: transparent;
   border: none;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  z-index: 2;
+  // position: absolute;
+  // top: 8px;
+  // right: 8px;
+  // z-index: 2;
   color: #e2b65c;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 32px;
-  background-color: red($color: #000000);
+  background-color: red;
   height: 32px;
   cursor: pointer;
 
