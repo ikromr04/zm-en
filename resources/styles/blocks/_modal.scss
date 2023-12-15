@@ -92,11 +92,11 @@
 .modal__close {
   // background: transparent;
   // border: none;
-  // // position: absolute;
-  // // top: 8px;
-  // // right: 8px;
-  // // z-index: 2;
-  // color: #e2b65c;
+  // position: absolute;
+  // top: 8px;
+  // right: 8px;
+  // z-index: 2;
+  color: #e2b65c;
   // display: flex;
   // align-items: center;
   // justify-content: center;
@@ -104,9 +104,9 @@
   // height: 32px;
   // cursor: pointer;
 
-  // &>* {
-  //   pointer-events: none;
-  // }
+  &>* {
+    pointer-events: none;
+  }
 }
 
 .modal__button {

@@ -1534,6 +1534,13 @@ img {
   }
 }
 
+.modal__close {
+  color: #e2b65c;
+}
+.modal__close > * {
+  pointer-events: none;
+}
+
 .modal__button {
   max-width: none;
 }
