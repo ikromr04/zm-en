@@ -104,9 +104,9 @@
   height: 32px;
   cursor: pointer;
 
-  &>* {
-    pointer-events: none;
-  }
+  // &>* {
+  //   pointer-events: none;
+  // }
 }
 
 .modal__button {

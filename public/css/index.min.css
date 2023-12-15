@@ -1545,9 +1545,6 @@ img {
   height: 32px;
   cursor: pointer;
 }
-.modal__close > * {
-  pointer-events: none;
-}
 
 .modal__button {
   max-width: none;
