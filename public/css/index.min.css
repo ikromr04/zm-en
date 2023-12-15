@@ -1539,6 +1539,7 @@ img {
   position: absolute;
   top: 8px;
   right: 8px;
+  z-index: 2;
   color: #e2b65c;
   display: flex;
   align-items: center;
