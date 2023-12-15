@@ -6,7 +6,7 @@ window.clearError = (input) => {
 
 document.querySelector('[type="submit"]').addEventListener('click', (evt) => {
   evt.preventDefault();
-  evt.target.setAttribute('disabled', 'disabled');
+  evt.target.setAttribute('data-loading', 'loading');
   const form = evt.target.closest('form');
 
   axios.post('/users/reset-password', new FormData(form))
@@ -14,22 +14,22 @@ document.querySelector('[type="submit"]').addEventListener('click', (evt) => {
       window.location.href = '/';
     })
     .catch((error) => {
-      if (error.response.data.email) {
+      if (error.response.data?.errors?.email) {
         form.querySelector('[name="email"]').closest('.field')
-          .setAttribute('data-error', error.response.data.email);
+          .setAttribute('data-error', error.response.data.errors.email[0]);
       }
-      if (error.response.data.password) {
+      if (error.response.data?.errors?.password) {
         form.querySelector('[name="password"]').closest('.field')
-          .setAttribute('data-error', error.response.data.password);
+          .setAttribute('data-error', error.response.data.errors.password[0]);
       }
-      if (error.response.data.confirm_password) {
+      if (error.response.data?.errors?.confirm_password) {
         form.querySelector('[name="confirm_password"]').closest('.field')
-          .setAttribute('data-error', error.response.data.confirm_password);
+          .setAttribute('data-error', error.response.data.errors.confirm_password[0]);
       }
       if (error.response.data.message) {
         form.previousElementSibling.classList.add('text--error')
         form.previousElementSibling.textContent = error.response.data.message;
       }
-      evt.target.removeAttribute('disabled');
+      evt.target.removeAttribute('data-loading');
     })
 });
