@@ -1695,7 +1695,7 @@ img {
   top: 16px;
   right: 16px;
   color: #e2b65c;
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
   width: 32px;
