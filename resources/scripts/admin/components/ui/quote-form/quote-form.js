@@ -17,7 +17,20 @@ export default function QuoteForm({ onSubmit, quote }) {
   useEffect(() => {
     axios
       .get(ApiRoute.Tags['index'])
-      .then(({ data }) => setTags(data))
+      .then(({ data }) => {
+        let tags = []
+        data.map((tag) => {
+          if (tag?.children) {
+            tags = [...tags, ...tag?.children]
+          }
+        })
+        tags = tags.sort((a, b) => {
+          if(a.title < b.title) { return -1; }
+          if(a.title > b.title) { return 1; }
+          return 0;
+        })
+        setTags(tags)
+      })
       .catch((error) => console.log(error));
   }, []);
 
