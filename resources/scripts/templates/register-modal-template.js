@@ -37,13 +37,13 @@ export const getRegisterModalTemplate = () => `
 
       <button class="modal__close" type="button" title="Close window">
         <svg width="11" height="10">
-          <use xlink:href="/images/stack.svg#close" />
+          <use xlink:href="/images/stack.svg/#close" />
         </svg>
       </button>
 
       <button class="modal__back" type="button" onclick="window.handleRegisterBack(event)">
         <svg width="18" height="12">
-          <use xlink:href="/images/stack.svg#back" />
+          <use xlink:href="/images/stack.svg/#back" />
         </svg>
         Back
       </button>
