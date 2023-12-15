@@ -1541,6 +1541,11 @@ img {
   right: 8px;
   z-index: 2;
   color: #e2b65c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
 }
 .modal__close > * {
