@@ -20,7 +20,7 @@ export default function QuotesEdit() {
 
   const handleFormSubmit = (evt) => {
     evt.preventDefault();
-
+    
     axios
       .post(generatePath(ApiRoute.Quotes['update'], { id: quote.id }), {
         quote: evt.target.quote.value,
