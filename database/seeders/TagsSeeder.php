@@ -21,10 +21,11 @@ class TagsSeeder extends Seeder
       array('id' => '22', 'group_id' => null, 'title' => 'Society','slug' => 'society','created_at' => '2023-09-25 12:06:48','updated_at' => '2023-09-25 12:06:48'),
       array('id' => '23', 'group_id' => null, 'title' => 'Ultimate questions about the World','slug' => 'ultimate-qestions-about-the-world','created_at' => '2023-09-25 12:06:51','updated_at' => '2023-11-22 05:49:23'),
 
-      array('id' => '84','title' => 'Universal Ideals','slug' => 'universal-ideals','group_id' => '22','created_at' => '2023-10-08 06:31:28','updated_at' => '2023-10-08 06:31:57'),
-      array('id' => '85','title' => 'Political World','slug' => 'political-world','group_id' => '22','created_at' => '2023-10-08 06:31:34','updated_at' => '2023-10-08 06:31:34'),
-      array('id' => '86','title' => 'Distant Future','slug' => 'distant-future','group_id' => '21','created_at' => '2023-10-08 06:31:38','updated_at' => '2023-10-19 06:04:28'),
-      array('id' => '87','title' => 'Social Development','slug' => 'social-development','group_id' => '22','created_at' => '2023-10-08 06:32:20','updated_at' => '2023-10-08 06:32:20'),
+      array('id' => 19'84','title' => 'Universal Ideals','slug' => 'universal-ideals','group_id' => '22','created_at' => '2023-10-08 06:31:28','updated_at' => '2023-10-08 06:31:57'),
+      array('id' => 20'85','title' => 'Political World','slug' => 'political-world','group_id' => '22','created_at' => '2023-10-08 06:31:34','updated_at' => '2023-10-08 06:31:34'),
+      array('id' => 21'86','title' => 'Distant Future','slug' => 'distant-future','group_id' => '21','created_at' => '2023-10-08 06:31:38','updated_at' => '2023-10-19 06:04:28'),
+      array('id' => 23'87','title' => 'Social Development','slug' => 'social-development','group_id' => '22','created_at' => '2023-10-08 06:32:20','updated_at' => '2023-10-08 06:32:20'),
+
       array('id' => '24','title' => 'Freedom','slug' => 'freedom','group_id' => '22','created_at' => '2023-10-08 06:32:24','updated_at' => '2023-10-08 06:32:24'),
       array('id' => '25','title' => 'Modern Issues','slug' => 'modern-issues','group_id' => '22','created_at' => '2023-10-08 06:32:28','updated_at' => '2023-10-08 06:33:08'),
       array('id' => '26','title' => 'Humanity','slug' => 'goals-of-humanity','group_id' => '22','created_at' => '2023-10-08 06:32:35','updated_at' => '2023-10-16 05:03:48'),

@@ -19,6 +19,22 @@ function CreateFolder({ setIsCreating, setFolders }) {
     }
   }
 
+  const handleInputBlur = (evt) => {
+    const title = evt.target.value
+    if (title) {
+      axios.post('/favorites/create', { title })
+        .then(({ data }) => {
+          setFolders((prevState) => {
+            return [data, ...JSON.parse(JSON.stringify(prevState))]
+          })
+          setIsCreating(false)
+        })
+        .catch((error) => console.error(error));
+    } else {
+      setIsCreating(false)
+    }
+  }
+
   return (
     <form className={style.folder} onSubmit={handleFormSubmit}>
       <svg
@@ -33,28 +49,8 @@ function CreateFolder({ setIsCreating, setFolders }) {
         className={style.input}
         placeholder="Enter title"
         name="new_folder_name"
+        onBlur={handleInputBlur}
         autoFocus />
-
-      <button
-        className={`${style.button} ${style.buttonSuccess}`}
-        type="submit"
-      >
-        <svg width={24} height={24}>
-          <use xlinkHref="/images/stack.svg#plus" />
-        </svg>
-        <span className={style.info}>Create</span>
-      </button>
-
-      <button
-        className={`${style.button} ${style.buttonError}`}
-        type="reset"
-        onClick={() => setIsCreating(false)}
-      >
-        <svg width={24} height={24}>
-          <use xlinkHref="/images/stack.svg#cancel" />
-        </svg>
-        <span className={style.info}>Cancel</span>
-      </button>
     </form>
   )
 }

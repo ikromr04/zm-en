@@ -23,6 +23,27 @@ function CreateSubfolder({ setIsCreating, folder, setFolder }) {
     }
   }
 
+  const handleInputBlur = (evt) => {
+    const title = evt.target.value
+
+    if (title) {
+      axios.post('/favorites/create', {
+        title,
+        parent_id: folder.id,
+      })
+        .then(({ data }) => {
+          setFolder({
+            ...folder,
+            children: [...folder.children, data]
+          })
+          setIsCreating(false)
+        })
+        .catch((error) => console.error(error));
+    } else {
+      setIsCreating(false)
+    }
+  }
+
   return (
     <form className={style.folder} onSubmit={handleFormSubmit}>
       <svg
@@ -37,28 +58,8 @@ function CreateSubfolder({ setIsCreating, folder, setFolder }) {
         className={style.input}
         placeholder="Enter title"
         name="new_subfolder_name"
+        onBlur={handleInputBlur}
         autoFocus />
-
-      <button
-        className={`${style.button} ${style.buttonSuccess}`}
-        type="submit"
-      >
-        <svg width={24} height={24}>
-          <use xlinkHref="/images/stack.svg#plus" />
-        </svg>
-        <span className={style.info}>Create</span>
-      </button>
-
-      <button
-        className={`${style.button} ${style.buttonError}`}
-        type="reset"
-        onClick={() => setIsCreating(false)}
-      >
-        <svg width={24} height={24}>
-          <use xlinkHref="/images/stack.svg#cancel" />
-        </svg>
-        <span className={style.info}>Cancel</span>
-      </button>
     </form>
   )
 }
