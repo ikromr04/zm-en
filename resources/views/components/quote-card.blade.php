@@ -74,12 +74,12 @@
       </button>
       @if ($quote->twitter)
         <a class="quote-card__button" href="{{ $quote->twitter }}" target="_blank">
+          Read on
           <span class="quote-card__button-icon">
             <svg width="14" height="14">
               <use xlink:href="{{ asset('images/stack.svg') }}#twitter" />
             </svg>
           </span>
-          @lang('Читайте на Х')
         </a>
       @endif
     </div>
