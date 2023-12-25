@@ -44,7 +44,7 @@ function CreateSubfolder({ setIsCreating, folder, setFolders }) {
               index < 0 && prevFolder.children.push({
                 id: data.id,
                 title: data.title,
-                isChecked: false,
+                isChecked: true,
               })
             }
             return prevFolder

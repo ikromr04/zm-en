@@ -83,6 +83,7 @@ function App() {
           type="button"
           style={{ maxWidth: 'none' }}
           onClick={handleSubmitClick}
+          disabled={isCreating}
         >
           Save
         </button>

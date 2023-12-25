@@ -37,7 +37,7 @@ function CreateFolder({ setIsCreating, setFolders }) {
               id: data.id,
               title: data.title,
               children: data.children,
-              isChecked: false,
+              isChecked: true,
             })
             return prevFolders
           })
