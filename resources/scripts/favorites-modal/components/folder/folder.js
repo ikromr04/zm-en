@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import style from './style.module.css'
 import CreateSubfolder from '../create-subfolder/create-subfolder'
 
-function Folder({ folder, setFolders }) {
+function Folder({ folder, setFolders, setIsDisabled }) {
   const [isCreating, setIsCreating] = useState(false)
 
   const handleClick = (evt) => {
@@ -60,7 +60,7 @@ function Folder({ folder, setFolders }) {
         <button
           className={style.button}
           type="button"
-          onClick={() => setIsCreating(true)}
+          onClick={() => {setIsCreating(true); setIsDisabled(true)}}
         >
           <svg width={24} height={24}>
             <use xlinkHref="/images/stack.svg#plus" />
@@ -68,7 +68,13 @@ function Folder({ folder, setFolders }) {
           <span className={style.info}>Create subfolder</span>
         </button>
       </div>
-      {isCreating && <CreateSubfolder folder={folder} setIsCreating={setIsCreating} setFolders={setFolders} />}
+      {isCreating &&
+        <CreateSubfolder
+          folder={folder}
+          setIsCreating={setIsCreating}
+          setIsDisabled={setIsDisabled}
+          setFolders={setFolders}
+        />}
       {folder?.children?.map((folder) => (
         <div key={folder.id} className={style.child} onClick={handleChildClick(folder.id)}>
           {folder?.isChecked

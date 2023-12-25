@@ -1,12 +1,13 @@
 import axios from 'axios'
 import style from './style.module.css'
 
-function CreateSubfolder({ setIsCreating, folder, setFolders }) {
+function CreateSubfolder({ setIsCreating, folder, setFolders, setIsDisabled }) {
   const handleFormSubmit = (evt) => {
     evt.preventDefault()
     const title = evt.target.new_subfolder_name.value
     if (!title) {
       setIsCreating(false)
+      setIsDisabled(false)
     } else {
       axios.post('/favorites/create', {
         title,
@@ -25,6 +26,7 @@ function CreateSubfolder({ setIsCreating, folder, setFolders }) {
             return prevFolder
           }))
           setIsCreating(false)
+          setIsDisabled(false)
         })
         .catch((error) => console.error(error));
     }
@@ -50,10 +52,12 @@ function CreateSubfolder({ setIsCreating, folder, setFolders }) {
             return prevFolder
           }))
           setIsCreating(false)
+          setIsDisabled(false)
         })
         .catch((error) => console.error(error));
     } else {
       setIsCreating(false)
+      setIsDisabled(false)
     }
   }
 

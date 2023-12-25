@@ -1,12 +1,13 @@
 import axios from 'axios'
 import style from './style.module.css'
 
-function CreateFolder({ setIsCreating, setFolders }) {
+function CreateFolder({ setIsCreating, setFolders, setIsDisabled }) {
   const handleFormSubmit = (evt) => {
     evt.preventDefault()
     const title = evt.target.new_folder_name.value
     if (!title) {
       setIsCreating(false)
+      setIsDisabled(false)
     } else {
       axios.post('/favorites/create', { title })
         .then(({ data }) => {
@@ -21,6 +22,7 @@ function CreateFolder({ setIsCreating, setFolders }) {
             return prevFolders
           })
           setIsCreating(false)
+          setIsDisabled(false)
         })
         .catch((error) => console.error(error));
     }
@@ -42,10 +44,12 @@ function CreateFolder({ setIsCreating, setFolders }) {
             return prevFolders
           })
           setIsCreating(false)
+          setIsDisabled(false)
         })
         .catch((error) => console.error(error));
     } else {
       setIsCreating(false)
+      setIsDisabled(false)
     }
   }
 

@@ -67,6 +67,11 @@ img {
   transition: 0.3s;
   cursor: pointer;
 
+  &:disabled {
+    opacity: 0.6;
+    cursor: context-menu;
+  }
+
   &[data-loading] {
     opacity: 0.6;
     pointer-events: none;
