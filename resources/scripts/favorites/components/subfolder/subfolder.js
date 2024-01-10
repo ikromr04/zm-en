@@ -77,13 +77,13 @@ function Subfolder(props) {
 
         {!isEditable &&
           <button className={style.button} type="button" onClick={() => setIsEditable(true)}>
-            <svg width={24} height={24}>
+            <svg width={18} height={18}>
               <use xlinkHref="/images/stack.svg#rename" />
             </svg>
             <span className={style.info}>Rename</span>
           </button>}
         <button className={style.button} type="button" onClick={() => setIsDeleting(true)}>
-          <svg width={24} height={24}>
+          <svg width={18} height={18}>
             <use xlinkHref="/images/stack.svg#delete" />
           </svg>
           <span className={style.info}>Delete folder</span>
