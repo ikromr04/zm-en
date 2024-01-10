@@ -19,7 +19,7 @@ export const getLoginModaltemplate = () => `
         </div>
 
         <div class="form__links">
-          <a class="text" onclick="window.showRegisterModal()" style="cursor: pointer">New user?</a>
+          <a class="text" onclick="window.showRegisterModal()" style="cursor: pointer; text-decoration: underline;">New user?</a>
           <a class="text text--error" onclick="window.showForgotPasswordModal()" style="cursor: pointer">Forgot password?</a>
         </div>
         <p class="form__aware">

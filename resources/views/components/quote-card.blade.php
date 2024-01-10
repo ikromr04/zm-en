@@ -70,7 +70,7 @@
             <use xlink:href="{{ asset('images/stack.svg') }}#{{ $quote->favorite ? 'bookmark' : 'favorite' }}" />
           </svg>
         </span>
-        @lang('В избранное')
+        Add
       </button>
       @if ($quote->twitter)
         <a class="quote-card__button" href="{{ $quote->twitter }}" target="_blank">
