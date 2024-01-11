@@ -106,6 +106,7 @@ export const dataGridLocalText = {
   filterValueTrue: 'истинный',
   filterValueFalse: 'ложь',
 
+  
   columnMenuLabel: 'Меню',
   columnMenuShowColumns: 'Показать столбцы',
   columnMenuManageColumns: 'Управление столбцами',

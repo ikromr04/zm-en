@@ -22,6 +22,9 @@ function App() {
         type="button"
         onClick={() => setIsCreating(true)}
         disabled={isCreating}
+        style={{
+          fontSize: '14px'
+        }}
       >
         Create new folder
       </button>

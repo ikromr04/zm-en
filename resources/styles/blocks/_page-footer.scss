@@ -26,6 +26,7 @@
 
   @include desktop {
     flex-direction: row;
+    justify-content: space-between;
     gap: 32px;
 
     br {
@@ -59,7 +60,6 @@
   min-width: max-content;
 
   @include desktop {
-    margin-right: auto;
     &::before {
       content: "";
       display: block;

@@ -89,6 +89,9 @@ function Folder(props) {
           className="button button--secondary"
           onClick={() => setIsCreating(true)}
           type="button"
+          style={{
+            fontSize: '14px'
+          }}
         >
           Create subfolder
         </button>
