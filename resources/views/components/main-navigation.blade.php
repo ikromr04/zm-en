@@ -8,7 +8,7 @@
 @endphp
 
 <nav class="{{ $className }}">
-  <a class="main-navigation__link{{ $route == 'home' || $route == 'quotes.selected' ? ' main-navigation__link--current' : '' }}" @if ($route != 'home') href="{{ route('home') }}" @endif>
+  <a class="main-navigation__link{{ $route == 'home' || $route == 'quotes.selected' ? ' main-navigation__link--current' : '' }}" href="{{ route('home') }}">
     @lang('Мысли')
   </a>
 

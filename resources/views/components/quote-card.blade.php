@@ -18,8 +18,8 @@
   </a>
 
   <div class="quote-card__top">
-    <q class="quote-card__quote" @if ($new)
-      style="color: #e2b65c;"
+    <q class="quote-card__quote" @if (!$new)
+      style="color: #014163;"
     @endif>{{ $quote->quote }}</q>
 
     <div class="quote-card__tags">
