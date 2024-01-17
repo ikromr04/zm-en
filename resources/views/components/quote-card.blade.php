@@ -18,7 +18,6 @@
   </a>
 
   <div class="quote-card__top">
-    {{ $diff_in_days }}
     <q class="quote-card__quote" @if ($new)
       style="color: #e2b65c;"
     @endif>{{ $quote->quote }}</q>
