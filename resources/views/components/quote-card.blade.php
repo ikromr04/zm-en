@@ -6,6 +6,10 @@
 
 @php
   $className = $class ? "$class quote-card" : 'quote-card';
+  $to = \Carbon\Carbon::createFromFormat('Y-m-d H:s:i', $quote->created_at);
+  $from = \Carbon\Carbon::now();
+  $diff_in_days = $to->diffInDays($from);
+  $new = $diff_in_days <= 7;
 @endphp
 
 <blockquote class="{{ $className }} tags-hidden">
@@ -14,7 +18,10 @@
   </a>
 
   <div class="quote-card__top">
-    <q class="quote-card__quote">{{ $quote->quote }}</q>
+    {{ $diff_in_days }}
+    <q class="quote-card__quote" @if ($new)
+      style="color: #e2b65c;"
+    @endif>{{ $quote->quote }}</q>
 
     <div class="quote-card__tags">
       @if ($selectedTag)

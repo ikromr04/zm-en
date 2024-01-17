@@ -80,19 +80,20 @@ window.register = (evt) => {
       window.location.reload();
     })
     .catch((error) => {
-      if (error.response.data.errors.name) {
+      console.log(error.response);
+      if (error.response?.data?.errors?.name) {
         form.querySelector('[name="name"]').closest('.field')
           .setAttribute('data-error', error.response.data.errors.name[0]);
       }
-      if (error.response.data.errors.email) {
+      if (error.response?.data?.errors?.email) {
         form.querySelector('[name="email"]').closest('.field')
           .setAttribute('data-error', error.response.data.errors.email[0]);
       }
-      if (error.response.data.errors.password) {
+      if (error.response?.data?.errors?.password) {
         form.querySelector('[name="password"]').closest('.field')
           .setAttribute('data-error', error.response.data.errors.password[0]);
       }
-      if (error.response.data.errors.confirm_password) {
+      if (error.response?.data?.errors?.confirm_password) {
         form.querySelector('[name="confirm_password"]').closest('.field')
           .setAttribute('data-error', error.response.data.errors.confirm_password[0]);
       }
