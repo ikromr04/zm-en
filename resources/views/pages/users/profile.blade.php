@@ -89,11 +89,11 @@
       </section>
 
       <section class="profile-section">
-        <h2 class="profile-section__title title">Account deletion</h2>
+        <h2 class="profile-section__title title">Delete your account</h2>
 
         <section class="modal modal--hidden" onclick="this.classList.add('modal--hidden')">
           <div class="modal__container">
-            <p class="modal__text text">Are you sure you want to delete this account?</p>
+            <p class="modal__text text">If you delete your account, your profile, your photo, and your favorite thoughts will be permanently deleted. Are you sure?</p>
 
             <form class="form" action="{{ route('auth.delete', session('user')->id) }}" method="post">
               @csrf
@@ -116,7 +116,7 @@
             type="button"
             onclick="this.closest('section').querySelector('.modal').classList.remove('modal--hidden')"
           >
-            Удалить
+            Delete
           </button>
         </form>
       </section>
