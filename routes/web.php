@@ -42,6 +42,7 @@ Route::group(['middleware' => ['VerifyEmail']], function() {
 
   Route::group(['middleware' => ['AuthCheck']], function () {
     Route::post('/auth/verify', [AuthController::class, 'verification'])->name('auth.verification');
+    Route::post('/auth/{id}', [AuthController::class, 'delete'])->name('auth.delete');
 
     Route::post('/users/{userId}/avatar', [UserController::class, 'updateAvatar']);
     Route::get('/users/{userId}/profile', [UserController::class, 'profile'])->name('users.profile');

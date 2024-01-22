@@ -87,6 +87,39 @@
           </button>
         </form>
       </section>
+
+      <section class="profile-section">
+        <h2 class="profile-section__title title">Account deletion</h2>
+
+        <section class="modal modal--hidden" onclick="this.classList.add('modal--hidden')">
+          <div class="modal__container">
+            <p class="modal__text text">Are you sure you want to delete this account?</p>
+
+            <form class="form" action="{{ route('auth.delete', session('user')->id) }}" method="post">
+              @csrf
+              <button class="form__submit button button--secondary" type="submit">
+                Delete
+              </button>
+            </form>
+
+            <button class="modal__close" type="button" title="Close window">
+              <svg width="11" height="10">
+                <use xlink:href="/images/stack.svg#close"/>
+              </svg>
+            </button>
+          </div>
+        </section>
+
+        <form class="profile-section__form form">
+          <button
+            class="form__submit button button--secondary"
+            type="button"
+            onclick="this.closest('section').querySelector('.modal').classList.remove('modal--hidden')"
+          >
+            Удалить
+          </button>
+        </form>
+      </section>
     </div>
 
     <aside class="posts">

@@ -60,4 +60,15 @@ class AuthController extends Controller
   {
     return redirect(route('home'));
   }
+
+  public function delete($id)
+  {
+    User::find($id)->delete();
+
+    if (session()->has('user')) {
+      session()->pull('user');
+    }
+    
+    return redirect(route('home'));
+  }
 }
