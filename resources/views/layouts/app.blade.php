@@ -26,8 +26,9 @@
     <meta property="og:description" content="Scientific and educational media resource. Welcome to Zafar Mirzo's author's website! Awareness about the methods of personal development and improvement of professional">
     <meta property="og:title" content="Authors site Zafar Mirzo" />
     <meta property="og:image:alt" content="Zafar Mirzo – Logo">
-    <meta name="twitter:title" content="Zafar Mirzo">
     <meta property="og:image" content="{{ asset('favicons/og.png') }}">
+    <meta name="twitter:title" content="Zafar Mirzo">
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="{{ asset('favicons/og.png') }}">
   @endif
   {{-- --------- Meta tags end--------- --}}
