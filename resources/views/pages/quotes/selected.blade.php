@@ -11,8 +11,8 @@
   <meta property="og:title" content="Zafar Mirzo's Author Site" />
   <meta property="og:image:alt" content="Zafar Mirzo's Author Site">
   <meta name="twitter:title" content="Zafar Mirzo's Author Site">
-  <meta property="og:image" content="{{ asset('favicons/180x180.png') }}">
-  <meta name="twitter:image" content="{{ asset('favicons/180x180.png') }}">
+  <meta property="og:image" content="{{ asset('favicons/og.png') }}">
+  <meta name="twitter:image" content="{{ asset('favicons/og.png') }}">
 @endsection
 
 @section('content')

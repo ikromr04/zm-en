@@ -1,5 +1,5 @@
 export const getPrivacyPolicyModaltemplate = () => `
-  <section class="modal" onclick="window.closeModal(event, this)">
+  <section class="modal" onclick="window.closeModal(event, this)" style="font-size: 12px;">
     <div class="modal__container modal__container--wide">
       <div class="modal__scroll">
         <h1 class="title title--secondary">Privacy Policy</h1>
@@ -19,28 +19,20 @@ export const getPrivacyPolicyModaltemplate = () => `
             <p>1.6. The Service is not responsible for how Personal Information is used by third parties with whom the User interacts within the framework of using the Service.</p>
           </section>
           <section>
-            <h2>2.Purposes of Processing Personal Information</h2>
-            <p>2.1. The Service may use Personal Information for the following purposes:</p>
-            <p>2.1.1. Identification of the user using a login-password combination for the proper functioning of the service.</p>
-            <p>2.1.2. Communication with the User for informational services and improving the quality of the service.</p>
-            <p>2.1.3. Analyzing user actions to improve the quality of the Service.</p>
-            <p>2.1.4. Using anonymized data for targeting advertising and/or informational materials based on age, gender, and other characteristics, including by third-party companies providing advertising material placement services.</p>
+            <h2>2.Requirements for the Protection of Personal Information</h2>
+            <p>2.1. The Service stores Personal Information and ensures its protection from unauthorized access and distribution.</p>
+            <p>2.2. Personal Information of the User is treated as confidential, except for publicly available information.</p>
+            <p>2.3. The Service may transfer Personal Information to third parties in the following cases:</p>
+            <p>2.3.1. In connection with the transfer of the Service to the ownership, use, or property of a third party.</p>
+            <p>2.3.2. At the request of a court or other authorized state body.</p>
           </section>
           <section>
-            <h2>3.Requirements for the Protection of Personal Information</h2>
-            <p>3.1. The Service stores Personal Information and ensures its protection from unauthorized access and distribution.</p>
-            <p>3.2. Personal Information of the User is treated as confidential, except for publicly available information.</p>
-            <p>3.3. The Service may transfer Personal Information to third parties in the following cases:</p>
-            <p>3.3.1. In connection with the transfer of the Service to the ownership, use, or property of a third party.</p>
-            <p>3.3.2. At the request of a court or other authorized state body.</p>
+            <h2>3. Changing Personal Information</h2>
+            <p>3.1. The User can independently change their Personal Data in the settings of their personal account.</p>
           </section>
           <section>
-            <h2>4. Changing Personal Information</h2>
-            <p>4.1. The User can independently change their Personal Data in the settings of their personal account.</p>
-          </section>
-          <section>
-            <h2>5. Changes to the Privacy Policy</h2>
-            <p>5.1. This Policy may be changed or terminated unilaterally by the Service without prior notice to the User. The new version of the Policy comes into force from the moment it is posted on the Site unless otherwise provided by the new version of the Policy.</p>
+            <h2>4. Changes to the Privacy Policy</h2>
+            <p>4.1. This Policy may be changed or terminated unilaterally by the Service without prior notice to the User. The new version of the Policy comes into force from the moment it is posted on the Site unless otherwise provided by the new version of the Policy.</p>
           </section>
         </div>
       </div>
