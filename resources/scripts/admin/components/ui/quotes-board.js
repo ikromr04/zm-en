@@ -19,11 +19,12 @@ export default function QuotesBoard() {
   useEffect(() => {
     axios
       .get(ApiRoute.Quotes['index'])
-      .then(({ data }) => setRows(data.map(({ id, quote, slug, created_at, tags }) => ({
+      .then(({ data }) => setRows(data.map(({ id, quote, slug, created_at, tags, twitter }) => ({
         id,
         created_at: dayjs(created_at).format('YYYY-MM-DD HH:mm'),
         quote,
         tags: tags.map(({ title }) => title).join(', '),
+        twitter,
         slug: `#${slug?.padStart(4, '0')}`,
       }))))
       .catch(({ response }) => toast.error(response.data.message));
@@ -62,8 +63,9 @@ export default function QuotesBoard() {
   const columns = [
     { field: 'id', headerName: 'ID', width: 72 },
     { field: 'created_at', headerName: 'Дата', width: 140 },
-    { field: 'quote', headerName: 'Мысль', width: 400 },
-    { field: 'tags', headerName: 'Теги', width: 300 },
+    { field: 'quote', headerName: 'Мысль', width: 300 },
+    { field: 'tags', headerName: 'Теги', width: 200 },
+    { field: 'twitter', headerName: 'Твиттер', width: 200 },
     {
       field: 'slug',
       headerName: 'Слаг',
