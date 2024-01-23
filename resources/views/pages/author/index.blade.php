@@ -27,7 +27,7 @@
       <div class="author-page__info-item" style="gap: 0;">
         <p>Welcome to my personal website, dedicated to important and relevant topics of modern society. On this website, you will find thoughts and reflections in their brief form, accumulated by me over many years, that reveal new facets of various concepts and definitions, as well as my opinions and views on important issues such as the modern individual, life values and ethics, society, enlightenment, and ultimate questions about the world.</p>
         <p>The main focus of my work is to contribute to the development of personality and self-realization. Understanding the importance of popularizing knowledge and making information accessible, the thoughts are presented in a way that makes their study easy, interesting, and informative.</p>
-        <p>I have been publishing on the internet since 2017. You can also find my work on Twitter and on other thematic platforms on the internet. For more in-depth reading, you will find links to many of them on Twitter. This will give you the opportunity to see reactions and comments from other readers, as well as share your own views.</p>
+        <p>I have been publishing on the internet since 2017. You can also find my work on Twitter and on other thematic platforms on the internet. For more in-depth reading, you will find links of them on Twitter. This will give you the opportunity to see reactions and comments from other readers, as well as share your own views.</p>
         <p>Enjoy your reading, friends, we hope it brings you new ideas and inspiration.</p>
         <p>Sincerely, Zafar Mirzo</p>
       </div>

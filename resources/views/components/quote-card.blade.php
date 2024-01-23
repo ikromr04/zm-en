@@ -18,9 +18,7 @@
   </a>
 
   <div class="quote-card__top">
-    <q class="quote-card__quote" @if ($new)
-      style="color: #3F578C;"
-    @endif>{{ $quote->quote }}</q>
+    <q class="quote-card__quote">{{ $quote->quote }}</q>
 
     <div class="quote-card__tags">
       @if ($selectedTag)
