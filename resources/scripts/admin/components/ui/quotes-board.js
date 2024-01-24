@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { dataGridLocalText } from '../../const';
 import { Button, IconButton } from '@mui/material';
-import { generatePath } from 'react-router-dom';
+import { Link, generatePath } from 'react-router-dom';
 import { Stack } from '@mui/system';
 import { toast } from 'react-toastify';
 import { ApiRoute, AppRoute } from '../../const';
@@ -65,7 +65,22 @@ export default function QuotesBoard() {
     { field: 'created_at', headerName: 'Дата', width: 140 },
     { field: 'quote', headerName: 'Мысль', width: 300 },
     { field: 'tags', headerName: 'Теги', width: 200 },
-    { field: 'twitter', headerName: 'Твиттер', width: 200 },
+    {
+      field: 'twitter',
+      headerName: 'Твиттер',
+      width: 200,
+      renderCell: (params) => (
+        <Link
+          to={params.row.twitter}
+          target="_blank"
+          style={{
+            wordBreak: 'break-all'
+          }}
+        >
+          {params.row.twitter}
+        </Link>
+      ),
+  },
     {
       field: 'slug',
       headerName: 'Слаг',
