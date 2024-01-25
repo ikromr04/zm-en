@@ -4,7 +4,7 @@
   @php
     //remove tags and slice body
     $share_text = preg_replace('#<[^>]+>#', ' ', $data->quote->quote);
-    // $share_text = mb_strlen($share_text) < 170 ? $share_text : mb_substr($share_text, 0, 166) . '...';
+    $share_text = mb_strlen($share_text) < 170 ? $share_text : mb_substr($share_text, 0, 166) . '...';
   @endphp
   <meta name="description" content="{{ $share_text }}">
   <meta property="og:title" content="Zafar Mirzo's Author Site" />
