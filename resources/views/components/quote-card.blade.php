@@ -97,7 +97,7 @@
         </a>
         @php
           $share_text = preg_replace('#<[^>]+>#', ' ', $quote->quote);
-          $share_text = mb_strlen($share_text) < 170 ? $share_text : mb_substr($share_text, 0, 166) . '...';
+          $share_text = mb_strlen($share_text) < 170 ? '„' . $share_text : mb_substr($share_text, 0, 166) . '...“ — Zafar Mirzo ';
         @endphp
         <a class="quote-card__share-link" title="@lang('Твиттер')" href="https://twitter.com/intent/tweet?url={{ route('quotes.selected', $quote->slug) }}&text={{ $share_text }}" target="_blank">
           <svg width="12" height="10">
