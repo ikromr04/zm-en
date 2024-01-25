@@ -95,7 +95,11 @@
             <use xlink:href="{{ asset('images/stack.svg') }}#facebook" />
           </svg>
         </a>
-        <a class="quote-card__share-link" title="@lang('Твиттер')" href="https://twitter.com/intent/tweet?url={{ route('quotes.selected', $quote->slug) }}&text={{ $quote->quote }}" target="_blank">
+        @php
+          $share_text = preg_replace('#<[^>]+>#', ' ', $quote->quote);
+          $share_text = mb_strlen($share_text) < 170 ? $share_text : mb_substr($share_text, 0, 166) . '...';
+        @endphp
+        <a class="quote-card__share-link" title="@lang('Твиттер')" href="https://twitter.com/intent/tweet?url={{ route('quotes.selected', $quote->slug) }}&text={{ $share_text }}" target="_blank">
           <svg width="12" height="10">
             <use xlink:href="{{ asset('images/stack.svg') }}#twitter" />
           </svg>
