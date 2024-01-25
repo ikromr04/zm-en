@@ -13,7 +13,7 @@
   <meta property="og:image:alt" content="Zafar Mirzo's Author Site">
   <meta property="og:image" content="{{ asset('favicons/og.png') }}">
 
-  <meta property="twitter:title" content="Zafar Mirzo's Author Site">
+  {{-- <meta property="twitter:title" content="Zafar Mirzo's Author Site"> --}}
   <meta property="twitter:card" content="summary" />
   <meta property="twitter:description" content="{{ $share_text }}">
   <meta property="twitter:image" content="{{ asset('favicons/og.png') }}">
