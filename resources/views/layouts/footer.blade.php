@@ -14,7 +14,6 @@
 
     <div class="page-footer__links">
       <div>@lang('Обратная связь'): <br> <a href="mailto:info@zmquotes.com">info@zmquotes.com</a></div>
-      <div><a href="https://zafarmirzo.com/" target="_blank">info@zafarmirzo.com</a></div>
     </div>
   </div>
 </footer>
