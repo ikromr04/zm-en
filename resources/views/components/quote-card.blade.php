@@ -95,7 +95,7 @@
             <use xlink:href="{{ asset('images/stack.svg') }}#facebook" />
           </svg>
         </a>
-        <a class="quote-card__share-link" title="@lang('Твиттер')" href="https://twitter.com/intent/tweet?url={{ route('quotes.selected', $quote->slug) }}&text=sdfsdf" target="_blank">
+        <a class="quote-card__share-link" title="@lang('Твиттер')" href="https://twitter.com/intent/tweet?url={{ route('quotes.selected', $quote->slug) }}&text={{ $quote->quote }}" target="_blank">
           <svg width="12" height="10">
             <use xlink:href="{{ asset('images/stack.svg') }}#twitter" />
           </svg>
