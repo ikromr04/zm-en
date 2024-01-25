@@ -32,19 +32,19 @@ class UserController extends Controller
 
     $token = Str::random(64);
 
-    DB::table('verify_email')->insert([
-      'token' => $token,
-      'user_id' => $user->id,
-    ]);
+    // DB::table('verify_email')->insert([
+    //   'token' => $token,
+    //   'user_id' => $user->id,
+    // ]);
 
-    Mail::send('emails.verify-email', [
-      'token' => $token,
-      'user' => $user,
-      'password' => $request->password,
-    ], function ($message) use ($request) {
-      $message->to($request->email);
-      $message->subject('Welcome to the site zmquotes.com!');
-    });
+    // Mail::send('emails.verify-email', [
+    //   'token' => $token,
+    //   'user' => $user,
+    //   'password' => $request->password,
+    // ], function ($message) use ($request) {
+    //   $message->to($request->email);
+    //   $message->subject('Welcome to the site zmquotes.com!');
+    // });
 
     session()->put('user', $user);
 
@@ -220,25 +220,30 @@ class UserController extends Controller
         'email' => 'required|email|unique:users,email',
       ]);
 
-      $token = Str::random(64);
+      $user->email = request('email');
+      $user->update();
 
-      DB::table('verify_email')->insert([
-        'token' => $token,
-        'user_id' => $user->id,
-      ]);
-      $email = request('email');
-      $user->email = $email;
-      $user->update = 'update';
-      Mail::send('emails.verify-email', [
-        'token' => $token,
-        'user' => $user,
-        'password' => '',
-      ], function ($message) use ($email) {
-        $message->to($email);
-        $message->subject('Welcome to the site zmquotes.com!');
-      });
+      session()->put('user', $user);
 
-      return redirect()->back()->with('verify', request('email'));
+      // $token = Str::random(64);
+
+      // DB::table('verify_email')->insert([
+      //   'token' => $token,
+      //   'user_id' => $user->id,
+      // ]);
+      // $email = request('email');
+      // $user->email = $email;
+      // $user->update = 'update';
+      // Mail::send('emails.verify-email', [
+      //   'token' => $token,
+      //   'user' => $user,
+      //   'password' => '',
+      // ], function ($message) use ($email) {
+      //   $message->to($email);
+      //   $message->subject('Welcome to the site zmquotes.com!');
+      // });
+
+      return redirect()->back();
     }
 
     $user->name = request('name');
