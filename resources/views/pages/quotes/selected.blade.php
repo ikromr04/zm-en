@@ -13,7 +13,7 @@
 
   <meta name="twitter:title" content="Zafar Mirzo's Author Site">
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:description" content="Scientific and educational media resource. Welcome to Zafar Mirzo's author's website! Awareness about the methods of personal development and improvement of professional">
+  <meta name="twitter:description" content="{{ $share_text }}">
   <meta name="twitter:image" content="{{ asset('favicons/og.png') }}">
 @endsection
 
