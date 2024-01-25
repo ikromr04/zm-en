@@ -8,7 +8,6 @@
   <meta name="description" content="{{ $share_text }}">
   <meta property="og:title" content="Zafar Mirzo's Author Site" />
   <meta property="og:type" content="aside" />
-  <meta property="og:url" content="https://zmquotes.com/" />
   <meta property="og:description" content="{{ $share_text }}">
   <meta property="og:image:alt" content="Zafar Mirzo's Author Site">
   <meta property="og:image" content="{{ asset('favicons/og.png') }}">
