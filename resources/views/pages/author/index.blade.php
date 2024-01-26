@@ -19,7 +19,7 @@
 
     <div class="author-page__info">
       <p class="author-page__info-item">
-        @lang('Предприниматель и писатель | Философия, Космология, Жизненные ценности, Современный человек и Личностный рост.')
+        Entrepreneur and Writer
       </p>
       <p class="author-page__info-item">
         @lang('1 Мая 1972')
@@ -33,23 +33,29 @@
       </div>
       <p class="author-page__info-item">
         @lang('Социальные сети')
-        <a
-          style="
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 24px;
-            height: 24px;
-            color: #111;
-          "
-          href="https://twitter.com/zafarmirzo"
-          title="@lang('Твиттер')"
-          target="_blank"
-        >
-          <svg width="20" height="16">
-            <use xlink:href="{{ asset('images/stack.svg') }}#twitter" />
-          </svg>
-        </a>
+        <span style="display: flex;">
+          <a
+            style="
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              width: 24px;
+              height: 24px;
+              color: #111;
+            "
+            href="https://twitter.com/zafarmirzo"
+            title="@lang('Твиттер')"
+            target="_blank"
+          >
+            <svg width="20" height="16">
+              <use xlink:href="{{ asset('images/stack.svg') }}#twitter" />
+            </svg>
+          </a>
+          - the Author's Thoughts on the official Twitter account.
+        </span>
+        <span>
+          <a href="https://zafarmirzo.com/" target="_blank">zafarmirzo.com</a> – personal webpage.
+        </span>
       </p>
     </div>
   </main>
