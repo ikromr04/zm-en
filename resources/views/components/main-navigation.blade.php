@@ -33,9 +33,7 @@
     </button>
   @endif
 
-  <button class="main-navigation__link main-navigation__link--search" type="button" title="@lang('Поиск')">
-    <svg class="main-navigation__link-icon" width="20" height="20">
-      <use xlink:href="{{ asset('images/stack.svg') }}#search" />
-    </svg>
-  </button>
+  <a class="main-navigation__link{{ $route == 'quotes.search' ? ' main-navigation__link--current' : '' }}" @if ($route != 'quotes.search') href="{{ route('quotes.search') }}" @endif>
+    Search
+  </a>
 </nav>

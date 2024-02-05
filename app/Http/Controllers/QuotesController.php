@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\Quote;
 use App\Models\Tag;
 use Illuminate\Http\Request;
@@ -29,9 +30,20 @@ class QuotesController extends Controller
   public function search(Request $request)
   {
     $data = new stdClass();
-    $data->quotes = Quote::where('quote', 'like', '%' . $request->keyword . '%')->get();
+    $data->posts = Post::latest()->get();
+    $data->quotes = [];
+    if ($request->exists('keyword')) {
+      if ($request->keyword) {
+        $data->quotes = Quote::where('quote', 'like', '%' . $request->keyword . '%')->get();
+        if (count($data->quotes) == 0) {
+          $data->quotes = null;
+        }
+      } else {
+        $data->quotes = null;
+      }
+    }
 
-    return view('components.search-modal-results', compact('data'))->render();
+    return view('pages.quotes.search', compact('data'));
   }
 
   public function index()
