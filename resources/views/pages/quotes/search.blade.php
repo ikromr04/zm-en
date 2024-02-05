@@ -43,3 +43,7 @@
     </aside>
   </main>
 @endsection
+
+@section('scripts')
+  <script src="{{ asset('js/pages/tags/index.min.js') }}" type="module"></script>
+@endsection
