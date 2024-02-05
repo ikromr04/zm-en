@@ -25,7 +25,7 @@
       @if ($data->quotes === null)
         <figure class="alert-warning">
           <figcaption>Um...</figcaption>
-          <p>Although we did our best, we did not find any authors or quotes. Please edit your search phrase.</p>
+          <p>Although we did our best, we did not find any quotes. Please edit your search phrase.</p>
         </figure>
       @endif
     </div>
