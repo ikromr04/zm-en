@@ -31,7 +31,7 @@ class QuotesController extends Controller
   {
     $data = new stdClass();
     $data->posts = Post::latest()->get();
-    $data->quotes = [];
+    $data->quotes = Quote::latest()->paginate(10);
     if ($request->exists('keyword')) {
       if ($request->keyword) {
         $data->quotes = Quote::where('quote', 'like', '%' . $request->keyword . '%')->get();

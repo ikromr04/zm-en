@@ -33,7 +33,7 @@
     </button>
   @endif
 
-  <a class="main-navigation__link{{ $route == 'quotes.search' ? ' main-navigation__link--current' : '' }}" @if ($route != 'quotes.search') href="{{ route('quotes.search') }}" @endif>
+  <a class="main-navigation__link{{ $route == 'quotes.search' ? ' main-navigation__link--current' : '' }}" href="{{ route('quotes.search') }}">
     Search
   </a>
 </nav>

@@ -7,7 +7,7 @@
 
       <form class="search-page__form" action="{{ route('quotes.search') }}" method="GET">
         @csrf
-        <input class="search-page__field" type="search" name="keyword" placeholder="Part of the quote" autocomplete="off" value="{{ request()->query('keyword') }}">
+        <input class="search-page__field" type="search" name="keyword" placeholder="Keyword" autocomplete="off" value="{{ request()->query('keyword') }}">
         <button class="search-page__submit button button--secondary" type="submit">Search</button>
       </form>
 
@@ -20,6 +20,9 @@
               </li>
             @endforeach
           </ul>
+          @if ($data->quotes instanceof \Illuminate\Pagination\LengthAwarePaginator)
+            {{ $data->quotes->links('components.pagination') }}
+          @endif
         </section>
       @endif
       @if ($data->quotes === null)
