@@ -32,19 +32,19 @@ class UserController extends Controller
 
     $token = Str::random(64);
 
-    // DB::table('verify_email')->insert([
-    //   'token' => $token,
-    //   'user_id' => $user->id,
-    // ]);
+    DB::table('verify_email')->insert([
+      'token' => $token,
+      'user_id' => $user->id,
+    ]);
 
-    // Mail::send('emails.verify-email', [
-    //   'token' => $token,
-    //   'user' => $user,
-    //   'password' => $request->password,
-    // ], function ($message) use ($request) {
-    //   $message->to($request->email);
-    //   $message->subject('Welcome to the site zmquotes.com!');
-    // });
+    Mail::send('emails.verify-email', [
+      'token' => $token,
+      'user' => $user,
+      'password' => $request->password,
+    ], function ($message) use ($request) {
+      $message->to($request->email);
+      $message->subject('Welcome to the site zmquotes.com!');
+    });
 
     session()->put('user', $user);
 

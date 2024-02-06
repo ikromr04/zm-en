@@ -27,7 +27,7 @@ Route::get('/auth/login', [AuthController::class, 'login'])->name('auth.login');
 Route::get('/auth/verify', [AuthController::class, 'verify'])->name('auth.verify');
 Route::get('/auth/verify/{id}/{hash}', [UserController::class, 'verifyEmail'])->name('auth.verifyEmail');
 
-// Route::group(['middleware' => ['VerifyEmail']], function() {
+Route::group(['middleware' => ['VerifyEmail']], function() {
   Route::get('/users/verify/{id}/{hash}/{email}', [UserController::class, 'verifyUsersEmail'])->name('users.verifyEmail');
   Route::get('/', [AppController::class, 'index'])->name('home');
   Route::get('/thoughts/search', [QuotesController::class, 'search'])->name('quotes.search');
@@ -58,7 +58,7 @@ Route::get('/auth/verify/{id}/{hash}', [UserController::class, 'verifyEmail'])->
     Route::get('/favorites/{favoriteId?}', [FavoriteController::class, 'show'])->name('favorites.show');
     Route::delete('/favorites/quotes/{quoteId}', [FavoriteController::class, 'remove']);
   });
-// });
+});
 Route::post('/users/verify/resend', [UserController::class, 'resendEmailVerification'])->name('user.verification.resend');
 
 Route::group(['middleware' => ['AdminCheck']], function () {
