@@ -12,6 +12,9 @@ export const AppRoute = {
     'create': '/admin/posts/create',
     'edit': '/admin/posts/:id/edit',
   },
+  Users: {
+    'index': '/admin/users',
+  },
   Logout: '/auth/logout',
 };
 
@@ -39,7 +42,12 @@ export const ApiRoute = {
     'update': '/post/:id',
     'delete': '/post/:id',
     'multidelete': '/posts/delete',
-  }
+  },
+  Users: {
+    'index': '/users',
+    'delete': '/users/:id',
+    'multidelete': '/users/delete',
+  },
 };
 
 export const dataGridLocalText = {
@@ -106,7 +114,7 @@ export const dataGridLocalText = {
   filterValueTrue: 'истинный',
   filterValueFalse: 'ложь',
 
-  
+
   columnMenuLabel: 'Меню',
   columnMenuShowColumns: 'Показать столбцы',
   columnMenuManageColumns: 'Управление столбцами',

@@ -15,6 +15,15 @@ use stdClass;
 
 class UserController extends Controller
 {
+  public function index()
+  {
+    try {
+      return User::latest()->get();
+    } catch (\Throwable $th) {
+      return $th;
+    }
+  }
+
   public function register(Request $request)
   {
     $request->validate([
@@ -289,5 +298,28 @@ class UserController extends Controller
     $data->favorites = Favorite::where('user_id', $userId)->get();
 
     return view('pages.users.favorites', compact('data'));
+  }
+
+  public function destroy($id)
+  {
+    try {
+      User::find($id)->delete();
+      return;
+    } catch (\Throwable $th) {
+      return $th;
+    }
+  }
+
+  public function multidelete(Request $request)
+  {
+    try {
+      foreach ((array) request('ids') as $id) {
+        User::find($id)->delete();
+      }
+
+      return;
+    } catch (\Throwable $th) {
+      return $th;
+    }
   }
 }

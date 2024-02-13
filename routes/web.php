@@ -84,4 +84,8 @@ Route::group(['middleware' => ['AdminCheck']], function () {
   Route::post('/post/{id}', [PostsController::class, 'update']);
   Route::delete('/post/{id}', [PostsController::class, 'destroy']);
   Route::post('/posts/delete', [PostsController::class, 'multidelete']);
+
+  Route::get('/users', [UserController::class, 'index']);
+  Route::delete('/users/{id}', [UserController::class, 'destroy']);
+  Route::post('/users/delete', [UserController::class, 'multidelete']);
 });

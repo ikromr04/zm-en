@@ -28,6 +28,10 @@ function PageNavigation() {
           <ListItemText primary="Картинки" />
         </ListItemButton>
 
+        <ListItemButton href={AppRoute.Users['index']} selected={location.pathname.startsWith(AppRoute.Users['index'])}>
+          <ListItemText primary="Пользователи" />
+        </ListItemButton>
+
         <ListItemButton href={AppRoute.Logout}>
           <ListItemText primary="Выйти" />
         </ListItemButton>
